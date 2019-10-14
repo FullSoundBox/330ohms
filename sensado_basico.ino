@@ -10,8 +10,8 @@ uint8_t estado_led = LOW;
 uint8_t previo_btn= HIGH;
 
 void setup(){
-  pinMode(btn_pin,INPUT_PULLUP);
-  pinMode(led_pin, OUTPUT);
+  pinMode(btn_pin,INPUT_PULLUP);  //creamos las variables que
+  pinMode(led_pin, OUTPUT);       //serviran al crear la interrupcion
   }
 
 void loop(){
@@ -21,6 +21,5 @@ void loop(){
     estado_led = !estado_led;
     digitalWrite(led_pin, estado_led);
     }
-   previo_btn = estado_btn;
-  delay(500);
-}
+   previo_btn = estado_btn;  //guardamos los cambios
+  delay(500);     //procesador haciendo otras cosas
